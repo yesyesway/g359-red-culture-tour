@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G359次列车沿线 2天1夜精简攻略</title>
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#c71c22',
+                        secondary: '#1d3557',
+                        accent: '#e6a23c',
+                        light: '#f9f0f0',
+                        dark: '#1d3557'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .text-shadow-lg {
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            }
+            .backdrop-blur {
+                backdrop-filter: blur(8px);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .mobile-friendly {
+                @apply px-4 py-2;
+            }
+            .mobile-button {
+                @apply w-full py-3 px-4 text-center;
+            }
+        }
+    </style>
+    <style>
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            /* 优化首屏高度 */
+            .hero-section {
+                min-height: 100vh;
+            }
+            
+            /* 优化图片加载 */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* 优化字体大小 */
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+            }
+            
+            /* 优化按钮大小 */
+            button, a.button {
+                min-height: 48px;
+            }
+            
+            /* 优化间距 */
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+        
+        /* 确保图片加载优化 */
+        img {
+            loading: lazy;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fa fa-train text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-secondary">铁路旅游</span>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="g359-guide.html" class="text-primary font-bold transition-colors duration-300">首页</a>
+                    <a href="#day1" class="text-secondary hover:text-primary transition-colors duration-300">第一天</a>
+                    <a href="#day2" class="text-secondary hover:text-primary transition-colors duration-300">第二天</a>
+                    <a href="#food" class="text-secondary hover:text-primary transition-colors duration-300">美食推荐</a>
+                    <a href="#tips" class="text-secondary hover:text-primary transition-colors duration-300">旅行贴士</a>
+                    <a href="#spirit" class="text-secondary hover:text-primary transition-colors duration-300">红色精神</a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-secondary focus:outline-none">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端导航菜单 -->
+                <div id="mobile-menu" class="md:hidden hidden pt-4 pb-4 bg-white rounded-b-lg shadow-lg">
+                    <a href="g359-guide.html" class="block py-3 px-4 text-primary font-bold hover:bg-gray-100">首页</a>
+                    <a href="#day1" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">第一天</a>
+                    <a href="#day2" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">第二天</a>
+                    <a href="#food" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">美食推荐</a>
+                    <a href="#tips" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">旅行贴士</a>
+                    <a href="#spirit" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">红色精神</a>
+                </div>
+        </div>
+    </nav>
+
+    <!-- 首屏 Hero 区域 -->
+    <section class="hero-section relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="relative h-full w-full">
+                <div class="absolute inset-0 bg-gradient-to-r from-secondary/70 to-transparent z-10"></div>
+                <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="铁路风景" class="h-full w-full object-cover" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 z-20">
+            <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 text-shadow-lg">G359次红色之旅</h1>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-shadow-lg">2天1夜红色文化精品路线</h2>
+                <p class="text-xl text-white mb-8 text-shadow">沿着高铁线路，传承红色基因，弘扬革命精神</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#day1" class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        开始红色之旅
+                    </a>
+                    <a href="#spirit" class="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white">
+                        红色精神
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#day1" class="text-white">
+                <i class="fa fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 路线概览 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">路线概览</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">G359次列车沿线城市精华景点与美食，2天1夜高效游览</p>
+            </div>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform -translate-x-1/2"></div>
+                
+                <div class="space-y-12">
+                    <!-- 延安 -->
+                    <div class="relative" data-aos="fade-up">
+                        <div class="hidden md:block absolute left-1/2 top-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 z-10"></div>
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+                                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">延安</h3>
+                                    <p class="text-gray-600 mb-4">革命圣地 · 黄土风情</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <i class="fa fa-map-marker mr-2 text-primary"></i>
+                                        <span>G359次列车起点</span>
+                                    </div>
+                                    <p class="text-gray-600">延安是中国革命的圣地，拥有丰富的红色旅游资源和独特的黄土高原风情。</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1275fef04b0c4773b0670eaf8bc66131~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=zhFtfC1fSnD0QH1k6kKEYdhbkVk%3D" alt="延安" class="w-full h-48 object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 西安 -->
+                    <div class="relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="hidden md:block absolute left-1/2 top-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 z-10"></div>
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:order-1 order-2">
+                                <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/2780ac808bbb435c98ae1930b96ab269~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=NpkItRFWKkEHUVfxTGPRLvBGtdQ%3D" alt="西安" class="w-full h-48 object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 md:order-2 order-1">
+                                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">西安</h3>
+                                    <p class="text-gray-600 mb-4">古都核心 · 美食天堂</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <i class="fa fa-clock-o mr-2 text-primary"></i>
+                                        <span>停留时间：约12小时</span>
+                                    </div>
+                                    <p class="text-gray-600">西安是中国四大古都之一，拥有丰富的历史文化遗产和闻名全国的美食。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 洛阳 -->
+                    <div class="relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="hidden md:block absolute left-1/2 top-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 z-10"></div>
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+                                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">洛阳</h3>
+                                    <p class="text-gray-600 mb-4">十三朝古都 · 牡丹花城</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <i class="fa fa-clock-o mr-2 text-primary"></i>
+                                        <span>停留时间：约8小时</span>
+                                    </div>
+                                    <p class="text-gray-600">洛阳是中国古代著名的都城，以龙门石窟和牡丹闻名于世。</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/a8205a7a0437457f9565ed10a00706d2~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=yrqkiERkDWEXrepRA31IBGRzjX4%3D" alt="洛阳" class="w-full h-48 object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 郑州 -->
+                    <div class="relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="hidden md:block absolute left-1/2 top-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 z-10"></div>
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:order-1 order-2">
+                                <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/af0c40cb94be4af9ad3e61d3ef1fd27f~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=XyQc85CdqbTOLBOmUEZrryU%2FVdE%3D" alt="郑州" class="w-full h-48 object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 md:order-2 order-1">
+                                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">郑州</h3>
+                                    <p class="text-gray-600 mb-4">中原枢纽 · 烩面之都</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <i class="fa fa-clock-o mr-2 text-primary"></i>
+                                        <span>停留时间：约4小时</span>
+                                    </div>
+                                    <p class="text-gray-600">郑州是中原地区的交通枢纽，以烩面等美食闻名。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 石家庄 -->
+                    <div class="relative" data-aos="fade-up" data-aos-delay="400">
+                        <div class="hidden md:block absolute left-1/2 top-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 z-10"></div>
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+                                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">石家庄</h3>
+                                    <p class="text-gray-600 mb-4">冀中名城 · 北方风味</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <i class="fa fa-clock-o mr-2 text-primary"></i>
+                                        <span>停留时间：约3小时</span>
+                                    </div>
+                                    <p class="text-gray-600">石家庄是河北省省会，拥有西柏坡等红色旅游资源和北方特色美食。</p>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12">
+                                <img src="https://p26-doubao-search-sign.byteimg.com/labis/98d289a067cc9967bfa19e7c11ab90a7~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=T2Z4MEoig%2FAFlLszzoulBR8CATY%3D" alt="石家庄" class="w-full h-48 object-cover rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 北京 -->
+                    <div class="relative" data-aos="fade-up" data-aos-delay="500">
+                        <div class="hidden md:block absolute left-1/2 top-6 w-6 h-6 bg-primary rounded-full transform -translate-x-1/2 z-10"></div>
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:order-1 order-2">
+                                <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/dd604896397c4c0c9205be915e9a42c6~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=rai6gIb%2BL2VrI6Aj%2BajsXUInP7E%3D" alt="北京" class="w-full h-48 object-cover rounded-lg shadow-md">
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 md:order-2 order-1">
+                                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-bold text-secondary mb-2">北京</h3>
+                                    <p class="text-gray-600 mb-4">帝都核心 · 古今交融</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <i class="fa fa-map-marker mr-2 text-primary"></i>
+                                        <span>G359次列车终点</span>
+                                    </div>
+                                    <p class="text-gray-600">北京是中国的首都，拥有丰富的历史文化遗产和现代化的城市风貌。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第一天行程 -->
+    <section id="day1" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">第一天行程</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">延安 → 西安</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 延安上午行程 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-right">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1275fef04b0c4773b0670eaf8bc66131~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=zhFtfC1fSnD0QH1k6kKEYdhbkVk%3D" alt="延安" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">上午</div>
+                            <h3 class="text-xl font-bold text-secondary">延安革命圣地之旅</h3>
+                        </div>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">08:00-09:30</span>
+                                    <p class="text-gray-600">宝塔山：延安的象征，俯瞰全城</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">09:45-11:00</span>
+                                    <p class="text-gray-600">枣园革命旧址：参观毛泽东等老一辈革命家的旧居</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">11:15-12:30</span>
+                                    <p class="text-gray-600">杨家岭革命旧址：中共七大会址所在地</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        革命旧址多为步行参观，请穿着舒适的鞋子。可购买联票节省费用。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 延安午餐 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/2780ac808bbb435c98ae1930b96ab269~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=NpkItRFWKkEHUVfxTGPRLvBGtdQ%3D" alt="延安美食" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">午餐</div>
+                            <h3 class="text-xl font-bold text-secondary">延安特色美食</h3>
+                        </div>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-lg mb-3">推荐餐厅：二道街夜市</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-1">洋芋擦擦</h5>
+                                    <p class="text-gray-600 text-sm">土豆蒸拌，香辣软糯</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-1">延安沾沾</h5>
+                                    <p class="text-gray-600 text-sm">无油串串，特色蘸料</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-1">麻辣羊蹄</h5>
+                                    <p class="text-gray-600 text-sm">软烂脱骨，酸辣入味</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h5 class="font-bold mb-1">荞麦饸饹</h5>
+                                    <p class="text-gray-600 text-sm">荞面+羊肉汤，清香筋道</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-cutlery text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        延安菜偏酸辣口味，分量较大，建议适量点餐。可尝试当地特色小吃组合。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 西安下午行程 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-right">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/a8205a7a0437457f9565ed10a00706d2~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=yrqkiERkDWEXrepRA31IBGRzjX4%3D" alt="西安" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">下午</div>
+                            <h3 class="text-xl font-bold text-secondary">西安古都文化之旅</h3>
+                        </div>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">14:00-15:30</span>
+                                    <p class="text-gray-600">陕西历史博物馆：了解陕西历史文化（需提前5天预约）</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">15:45-17:30</span>
+                                    <p class="text-gray-600">大雁塔北广场：观赏唐代建筑，感受盛唐气象</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">17:45-19:00</span>
+                                    <p class="text-gray-600">大唐不夜城：体验唐代文化街区，欣赏夜景</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        陕历博免费但需提前5天预约，建议上午参观。大唐不夜城夜景最美，适合傍晚前往。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 西安晚餐和夜景 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/af0c40cb94be4af9ad3e61d3ef1fd27f~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=XyQc85CdqbTOLBOmUEZrryU%2FVdE%3D" alt="西安夜景" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">晚上</div>
+                            <h3 class="text-xl font-bold text-secondary">西安美食与夜景</h3>
+                        </div>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">19:00-20:30</span>
+                                    <p class="text-gray-600">回民街/洒金桥：品尝西安特色美食</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">20:45-22:00</span>
+                                    <p class="text-gray-600">西安城墙：夜骑体验，欣赏古城夜景</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-moon-o text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        回民街游客较多，推荐去洒金桥品尝本地人常去的美食。城墙夜骑是西安特色体验，建议提前预约。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 西安住宿建议 -->
+            <div class="mt-8 bg-white rounded-xl shadow-lg p-6" data-aos="fade-up">
+                <h3 class="text-xl font-bold text-secondary mb-4">西安住宿建议</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-2">钟鼓楼附近</h4>
+                        <p class="text-gray-600 text-sm">交通便利，靠近回民街和城墙，适合夜游</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-2">大雁塔附近</h4>
+                        <p class="text-gray-600 text-sm">环境较好，靠近大唐不夜城，适合文化游</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-2">西安北站附近</h4>
+                        <p class="text-gray-600 text-sm">方便第二天乘坐高铁，适合赶早班车</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二天行程 -->
+    <section id="day2" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">第二天行程</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">西安 → 洛阳 → 郑州 → 石家庄 → 北京</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 洛阳行程 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/98d289a067cc9967bfa19e7c11ab90a7~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=T2Z4MEoig%2FAFlLszzoulBR8CATY%3D" alt="洛阳" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">上午</div>
+                            <h3 class="text-xl font-bold text-secondary">洛阳牡丹花城之旅</h3>
+                        </div>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">08:00-10:30</span>
+                                    <p class="text-gray-600">龙门石窟：欣赏中国四大石窟之一的艺术瑰宝</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">10:45-12:00</span>
+                                    <p class="text-gray-600">白马寺：参观中国第一座佛教寺院</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        龙门石窟建议早去，避开人流高峰。4-5月牡丹花期是洛阳最佳旅游季节。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 郑州行程 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/dd604896397c4c0c9205be915e9a42c6~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=rai6gIb%2BL2VrI6Aj%2BajsXUInP7E%3D" alt="郑州" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">中午</div>
+                            <h3 class="text-xl font-bold text-secondary">郑州中原文化之旅</h3>
+                        </div>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">13:00-14:30</span>
+                                    <p class="text-gray-600">河南博物院：了解中原文化（需提前预约）</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">14:45-16:00</span>
+                                    <p class="text-gray-600">二七纪念塔：郑州市中心地标建筑</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        河南博物院免费但需提前预约。郑州东站附近有许多当地特色餐馆，可品尝正宗烩面。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 石家庄行程 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="石家庄" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">下午</div>
+                            <h3 class="text-xl font-bold text-secondary">石家庄冀中文化之旅</h3>
+                        </div>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">16:30-17:30</span>
+                                    <p class="text-gray-600">正定古城：参观历史悠久的古城墙和寺庙</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">17:45-18:45</span>
+                                    <p class="text-gray-600">赵州桥：参观世界上最古老的石拱桥</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-yellow-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-yellow-700">
+                                        石家庄站到正定古城和赵州桥有公交直达，但时间有限，建议选择其中一个景点游览。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 北京行程 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden md:col-span-2 lg:col-span-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/d96fe810ed3644048e5df5a1f35b3c30~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=jEvuaxs4xYuQZetelaBjC6VZRfk%3D" alt="北京" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary text-white text-sm font-bold px-3 py-1 rounded-full mr-3">晚上</div>
+                            <h3 class="text-xl font-bold text-secondary">北京帝都文化之旅</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                        <div>
+                                            <span class="font-bold">19:30-20:30</span>
+                                            <p class="text-gray-600">天安门广场：欣赏夜景，感受首都氛围</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                        <div>
+                                            <span class="font-bold">20:45-22:00</span>
+                                            <p class="text-gray-600">南锣鼓巷/什刹海：体验北京胡同文化，品尝特色小吃</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fa fa-info-circle text-blue-400"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-sm text-blue-700">
+                                                北京西站有地铁9号线和7号线，约30分钟可到达天安门广场。第二天可继续游览故宫、长城等景点。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-green-50 border-l-4 border-green-400 p-4">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fa fa-check-circle text-green-400"></i>
+                                        </div>
+                                        <div class="ml-3">
+                                            <p class="text-sm text-green-700">
+                                                G359次列车沿线2天1夜行程结束。如果时间充裕，建议在北京停留1-2天，游览更多景点。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 美食推荐 -->
+    <section id="food" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">沿线美食推荐</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">品味各地特色美食，感受不同地域的饮食文化</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 延安美食 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/pgc-image/2780ac808bbb435c98ae1930b96ab269~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=NpkItRFWKkEHUVfxTGPRLvBGtdQ%3D" alt="延安美食" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">延安（革命圣地·黄土风情）</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-lg mb-2">必游景点</h4>
+                            <p class="text-gray-600">宝塔山、枣园、杨家岭革命旧址、壶口瀑布、南泥湾</p>
+                        </div>
+                        <div class="space-y-6 mb-6">
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">洋芋擦擦</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="洋芋擦擦" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">土豆蒸拌，香辣软糯，陕北特色小吃</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">延安沾沾</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="延安沾沾" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">无油串串，特色蘸料，健康美味</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">麻辣羊蹄</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="麻辣羊蹄" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">软烂脱骨，酸辣入味，下酒必备</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">碗砣（荞麦）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="碗砣" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">筋道凉调，配麻辣肝</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">荞麦饸饹</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="荞麦饸饹" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">荞面+羊肉汤，清香筋道，营养健康</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">油糕、黄馍馍、油馍馍</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">陕北传统甜口小吃</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        革命旧址多步行，穿舒适鞋；壶口瀑布雨季（6-10月）最壮观；二道街夜市必逛
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-primary mr-1"></i>
+                            <span>推荐地点：二道街夜市、南门坡小吃街</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 西安美食 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/a8205a7a0437457f9565ed10a00706d2~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=yrqkiERkDWEXrepRA31IBGRzjX4%3D" alt="西安美食" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">西安北（古都核心·美食天堂）</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-lg mb-2">必游景点</h4>
+                            <p class="text-gray-600">兵马俑、华清宫、钟鼓楼、回民街、城墙、大唐不夜城、陕历博</p>
+                        </div>
+                        <div class="space-y-6 mb-6">
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">肉夹馍+凉皮+冰峰（三秦套餐）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="凉皮" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">西安经典组合，地道陕味</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">牛羊肉泡馍/小炒（刘信、同盛祥）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="牛羊肉泡馍" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">西安招牌美食，老字号出品</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">Biangbiang面（油泼）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="Biangbiang面" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">油泼辣子面，宽如裤带，香辣可口</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">贾三灌汤包、甑糕、柿子饼</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="油糕" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">回民街名吃，地道西安风味</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">牛肉汤</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="牛肉汤" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">西安传统美食，汤浓肉香</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        陕历博需提前5天预约；回民街人多，可去洒金桥本地人街区；城墙夜骑体验极佳
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-primary mr-1"></i>
+                            <span>推荐地点：回民街、洒金桥、永兴坊</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 洛阳美食 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/labis/98d289a067cc9967bfa19e7c11ab90a7~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=T2Z4MEoig%2FAFlLszzoulBR8CATY%3D" alt="洛阳美食" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">洛阳龙门（十三朝古都·牡丹花城）</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-lg mb-2">必游景点</h4>
+                            <p class="text-gray-600">龙门石窟、白马寺、丽景门、隋唐大运河博物馆、老君山</p>
+                        </div>
+                        <div class="space-y-6 mb-6">
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">牛肉汤/羊肉汤（马杰山、三旦羊肉汤）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="羊肉汤" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">洛阳早餐灵魂，配饼丝最佳</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">不翻汤（老城丽景门）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="不翻汤" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">洛阳传统名吃，酸辣开胃</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">小街锅贴（西工小街总店）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="小街锅贴" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">皮薄馅大，酥脆可口</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">洛阳水席（真不同，必点牡丹燕菜）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="洛阳水席" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">洛阳传统宴席，酸辣鲜香</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">胡辣汤</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="胡辣汤" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">洛阳传统早餐，香辣开胃</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        龙门石窟建议早去，避开人流；喝汤是洛阳早餐灵魂，配饼丝最佳；丽景门夜景+夜市必去
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-primary mr-1"></i>
+                            <span>推荐地点：丽景门夜市、西工小街、老城十字街</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 郑州美食 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/dd604896397c4c0c9205be915e9a42c6~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=rai6gIb%2BL2VrI6Aj%2BajsXUInP7E%3D" alt="郑州美食" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">郑州东（中原枢纽·烩面之都）</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-lg mb-2">必游景点</h4>
+                            <p class="text-gray-600">河南博物院、少林寺、嵩山、黄河文化公园</p>
+                        </div>
+                        <div class="space-y-4 mb-6">
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">羊肉烩面</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">汤浓面筋，配糖蒜，郑州招牌美食</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">胡辣汤+油条/油馍头</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">河南经典早餐，香辣开胃</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">铁锅焖面、大盘鸡</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">地道中原风味，分量十足</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        河南博物院免费，需预约；少林寺距市区较远，建议安排1天；东站附近老店多，步行可达
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-primary mr-1"></i>
+                            <span>推荐地点：东站附近老店、二七广场周边、健康路夜市</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 石家庄美食 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="石家庄美食" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">石家庄（冀中名城·北方风味）</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-lg mb-2">必游景点</h4>
+                            <p class="text-gray-600">西柏坡（红色）、正定古城、赵州桥、荣国府</p>
+                        </div>
+                        <div class="space-y-6 mb-6">
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">金凤扒鸡</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="金凤扒鸡" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">百年老字号，肉质鲜嫩，香气扑鼻</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">正定马家卤鸡</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="正定马家卤鸡" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">百年非遗，肉质鲜美，香气浓郁</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">缸炉烧饼（夹肉/驴肉）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="缸炉烧饼" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">外酥里嫩，香气四溢</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">正定八大碗（四荤四素蒸菜）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="正定八大碗" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">传统宴席菜，风味独特</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">驴肉火烧</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="驴肉火烧" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">地道北方风味，驴肉鲜香，火烧酥脆</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        西柏坡+正定古城可一日游；正定美食集中，本地人常去；牛肉罩饼是清真特色（清真寺街）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-primary mr-1"></i>
+                            <span>推荐地点：正定古城、清真寺街、勒泰中心</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 北京美食 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/d96fe810ed3644048e5df5a1f35b3c30~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=jEvuaxs4xYuQZetelaBjC6VZRfk%3D" alt="北京美食" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">北京西（帝都核心·古今交融）</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-lg mb-2">必游景点</h4>
+                            <p class="text-gray-600">天安门、故宫、长城、颐和园、军事博物馆、天坛</p>
+                        </div>
+                        <div class="space-y-6 mb-6">
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">北京烤鸭（四季民福、小大董）</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="北京烤鸭" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">北京招牌美食，皮脆肉嫩</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">炸酱面</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="炸酱面" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">老北京传统小吃，地道京味</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">特色</div>
+                                    <h4 class="font-bold">卤煮</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="卤煮" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">老北京传统小吃，风味独特</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">铜锅涮肉</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="铜锅涮肉" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">传统京味美食，冬季必备</p>
+                            </div>
+                            <div>
+                                <div class="flex items-start mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-1 mr-3">推荐</div>
+                                    <h4 class="font-bold">门钉肉饼、糖火烧</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <img src="https://p3-doubao-search-sign.byteimg.com/mosaic-legacy/96d00066ad6d499279d~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=m581qhZ87oXSQtpqB1xu7Ae68ew%3D" alt="门钉肉饼" class="w-full h-40 object-cover rounded-lg">
+                                </div>
+                                <p class="text-gray-600 text-sm">传统京味小吃，各具特色</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        北京景点众多，建议提前规划路线；故宫、长城等热门景点需提前预约；北京西站交通便利，可快速到达市区各景点
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fa fa-map-marker text-primary mr-1"></i>
+                            <span>推荐地点：南锣鼓巷、什刹海、王府井小吃街</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅行贴士 -->
+    <section id="tips" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">旅行贴士</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">实用建议，让您的旅程更加顺畅愉快</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 交通贴士 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-train text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">交通贴士</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>G359次列车提前15天购票，建议选择靠窗座位</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>各城市间高铁行程较短，建议提前30分钟到达车站</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>城市内交通可使用地铁、公交或打车软件</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>西安城墙、北京胡同等地适合骑行游览，可租用共享单车</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 住宿贴士 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-bed text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">住宿贴士</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>建议提前1-2周预订酒店，特别是旅游旺季</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>西安推荐住在钟鼓楼附近或大雁塔附近，交通便利</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>选择靠近地铁站的酒店，方便出行</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>可使用各大旅行APP比价，选择性价比高的住宿</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 游览贴士 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-camera text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">游览贴士</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>陕历博、河南博物院等需提前预约，建议提前规划</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>龙门石窟、兵马俑等热门景点建议早去，避开人流</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>准备舒适的鞋子，革命旧址和古城多需要步行</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>带好防晒用品、帽子、墨镜等，保护皮肤</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 美食贴士 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-cutlery text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">美食贴士</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>西安回民街游客较多，可去洒金桥品尝本地人常去的美食</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>洛阳喝汤是早餐灵魂，配饼丝最佳</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>各地美食分量较大，建议适量点餐，避免浪费</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>可使用美食APP查找当地人气餐厅和特色小吃</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 季节贴士 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-calendar text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">季节贴士</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>春季（3-5月）：洛阳牡丹花期，气温宜人，适合赏花</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>夏季（6-8月）：壶口瀑布水量大，壮观，但气温较高</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>秋季（9-11月）：气候凉爽，适合户外活动，是旅游旺季</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>冬季（12-2月）：气温较低，部分景点可能受天气影响</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 其他贴士 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-lightbulb-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-4">其他贴士</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>准备好身份证，景区和酒店都需要</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>下载离线地图，避免信号不好影响导航</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>准备常用药品，如感冒药、肠胃药、创可贴等</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                            <span>尊重当地风俗习惯，注意言行举止</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 红色文化精神传递 -->
+    <section id="spirit" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">红色文化精神传递</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">传承红色基因，弘扬革命精神</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 延安历史与精神 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-right">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p11-doubao-search-sign.byteimg.com/pgc-image/1275fef04b0c4773b0670eaf8bc66131~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=zhFtfC1fSnD0QH1k6kKEYdhbkVk%3D" alt="延安" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-4">延安历史与精神</h3>
+                        <p class="text-gray-600 mb-6">
+                            延安是中国革命圣地，1935年后成为中共中央所在地，历经抗日战争、解放战争洗礼，铸就了中国革命的总后方。这里孕育出延安精神，核心是坚定正确的政治方向，解放思想、实事求是的思想路线，全心全意为人民服务的根本宗旨，以及自力更生、艰苦奋斗的创业精神，是砥砺前行的精神丰碑。
+                        </p>
+                        <div class="bg-red-50 border-l-4 border-primary p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-lightbulb-o text-primary"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-gray-700">
+                                        延安精神是中国共产党和中华民族的宝贵精神财富，是我们战胜困难、取得胜利的重要法宝。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 北京历史与精神 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p26-doubao-search-sign.byteimg.com/tos-cn-i-qvj2lq49k0/dd604896397c4c0c9205be915e9a42c6~tplv-be4g95zd3a-image.jpeg?lk3s=feb11e32&x-expires=1791206213&x-signature=rai6gIb%2BL2VrI6Aj%2BajsXUInP7E%3D" alt="北京" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-4">北京历史与精神</h3>
+                        <p class="text-gray-600 mb-6">
+                            北京是千年古都，历经辽、金、元、明、清建都，文脉绵延、底蕴深厚，见证了多民族融合与国家兴衰。近现代以来，它成为国家政治文化中心，承载着民族复兴的使命。北京精神以爱国、创新、包容、厚德为内核，兼具古都的沉稳气度与时代的奋进力量，彰显大国首都的格局与担当。
+                        </p>
+                        <div class="bg-red-50 border-l-4 border-primary p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-lightbulb-o text-primary"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-gray-700">
+                                        北京精神体现了社会主义核心价值观的要求，是首都人民共同的精神追求和价值导向。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 精神传递板块 -->
+            <div class="mt-16 bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-primary mb-6 text-center">精神传递</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-red-50 p-6 rounded-lg text-center">
+                        <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-flag text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-primary mb-2">传承红色基因</h4>
+                        <p class="text-gray-600">通过参观革命圣地，了解革命历史，传承和弘扬红色文化，让红色基因代代相传。</p>
+                    </div>
+                    <div class="bg-red-50 p-6 rounded-lg text-center">
+                        <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-heart text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-primary mb-2">弘扬革命精神</h4>
+                        <p class="text-gray-600">将延安精神和北京精神融入日常生活，激励我们在新时代中砥砺前行，为实现中华民族伟大复兴而努力。</p>
+                    </div>
+                    <div class="bg-red-50 p-6 rounded-lg text-center">
+                        <div class="bg-primary bg-opacity-10 text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-users text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-primary mb-2">共建美好未来</h4>
+                        <p class="text-gray-600">凝聚精神力量，团结一心，共同建设更加繁荣富强的祖国，创造更加美好的未来。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // 初始化 AOS 动画库
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // 移动端菜单切换
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // 如果是移动端，点击后关闭菜单
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+            
+            // 返回顶部按钮
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+
+        });
+    </script>
+</body>
+</html>
