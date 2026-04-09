@@ -36,6 +36,11 @@
 30. **beijing_food3.jpg** - 北京美食图片（卤煮）
 31. **beijing_food4.jpg** - 北京美食图片（铜锅涮肉）
 32. **beijing_food5.jpg** - 北京美食图片（门钉肉饼）
+33. **zhengzhou_food1.jpg** - 郑州美食图片（羊肉烩面）
+34. **zhengzhou_food2.jpg** - 郑州美食图片（胡辣汤）
+35. **zhengzhou_food3.jpg** - 郑州美食图片（铁锅焖面）
+36. **zhengzhou_food4.jpg** - 郑州美食图片（汴京烤鸭）
+37. **zhengzhou_food5.jpg** - 郑州美食图片（炒凉粉）
 
 ## 图片来源
 
