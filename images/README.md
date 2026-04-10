@@ -49,6 +49,9 @@
 43. **train_second.jpg** - 高铁二等座图片
 44. **train_accessible.jpg** - 高铁无障碍座图片
 45. **train_info.jpg** - 高铁列车信息图片
+46. **train_power_business.jpg** - 高铁商务座电源位置图片
+47. **train_power_first.jpg** - 高铁一等座电源位置图片
+48. **train_power_second.jpg** - 高铁二等座电源位置图片
 
 ## 图片来源
 
