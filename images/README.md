@@ -44,6 +44,11 @@
 38. **zhengzhou_food3.jpg** - 郑州美食图片（铁锅焖面）
 39. **zhengzhou_food4.jpg** - 郑州美食图片（汴京烤鸭）
 40. **zhengzhou_food5.jpg** - 郑州美食图片（炒凉粉）
+41. **train_business.jpg** - 高铁商务座图片
+42. **train_first.jpg** - 高铁一等座图片
+43. **train_second.jpg** - 高铁二等座图片
+44. **train_accessible.jpg** - 高铁无障碍座图片
+45. **train_info.jpg** - 高铁列车信息图片
 
 ## 图片来源
 
