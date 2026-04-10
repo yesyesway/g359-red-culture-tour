@@ -114,6 +114,7 @@
                 <!-- 桌面导航 -->
                 <div class="hidden md:flex space-x-8">
                     <a href="g359-guide.html" class="text-primary font-bold transition-colors duration-300">首页</a>
+                    <a href="#train" class="text-secondary hover:text-primary transition-colors duration-300">高铁信息</a>
                     <a href="#day1" class="text-secondary hover:text-primary transition-colors duration-300">第一天</a>
                     <a href="#day2" class="text-secondary hover:text-primary transition-colors duration-300">第二天</a>
                     <a href="#food" class="text-secondary hover:text-primary transition-colors duration-300">美食推荐</a>
@@ -132,6 +133,7 @@
             <!-- 移动端导航菜单 -->
                 <div id="mobile-menu" class="md:hidden hidden pt-4 pb-4 bg-white rounded-b-lg shadow-lg">
                     <a href="g359-guide.html" class="block py-3 px-4 text-primary font-bold hover:bg-gray-100">首页</a>
+                    <a href="#train" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">高铁信息</a>
                     <a href="#day1" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">第一天</a>
                     <a href="#day2" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">第二天</a>
                     <a href="#food" class="block py-3 px-4 text-secondary hover:text-primary hover:bg-gray-100">美食推荐</a>
@@ -306,6 +308,104 @@
                                         <span>G359次列车终点</span>
                                     </div>
                                     <p class="text-gray-600">北京是中国的首都，拥有丰富的历史文化遗产和现代化的城市风貌。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 高铁信息 -->
+    <section id="train" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">G359次高铁信息</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">了解G359次列车的详细信息，为您的红色之旅做好准备</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-right">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/railway.jpg" alt="G359次高铁" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">列车概览</h3>
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-train text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">车次：G359</span>
+                                    <p class="text-gray-600">高速动车组列车</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">起止站：延安 → 北京西</span>
+                                    <p class="text-gray-600">全程约1180公里</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">运行时间：约5小时30分钟</span>
+                                    <p class="text-gray-600">具体时间以实际车次为准</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-calendar text-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">发车频率：每日开行</span>
+                                    <p class="text-gray-600">具体发车时间请查询12306官网</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/railway.jpg" alt="高铁线路图" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-4">沿线站点</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <div class="w-3 h-3 rounded-full bg-primary mr-3"></div>
+                                <span>延安（起点）</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-gray-400 mr-3"></div>
+                                <span>西安北</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-gray-400 mr-3"></div>
+                                <span>洛阳龙门</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-gray-400 mr-3"></div>
+                                <span>郑州东</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-gray-400 mr-3"></div>
+                                <span>石家庄</span>
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-3 h-3 rounded-full bg-primary mr-3"></div>
+                                <span>北京西（终点）</span>
+                            </li>
+                        </ul>
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa fa-info-circle text-blue-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-blue-700">
+                                        建议提前15-30分钟到达车站，办理检票手续。具体车次信息请以12306官网为准。
+                                    </p>
                                 </div>
                             </div>
                         </div>
