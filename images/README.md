@@ -5,7 +5,7 @@
 ## 需要下载的图片
 
 1. **railway.jpg** - 铁路风景图片
-2. **yanan.jpg** - 延安风景图片
+2. **yanan.jpg** - 延安革命旧址图片（中华苏维埃共和国临时中央政府）
 3. **xian.jpg** - 西安风景图片
 4. **luoyang.jpg** - 洛阳风景图片
 5. **zhengzhou.jpg** - 郑州风景图片
