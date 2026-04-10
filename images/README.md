@@ -52,6 +52,7 @@
 46. **train_power_business.jpg** - 高铁商务座电源位置图片
 47. **train_power_first.jpg** - 高铁一等座电源位置图片
 48. **train_power_second.jpg** - 高铁二等座电源位置图片
+49. **train_power_public.jpg** - 高铁公共区电源位置图片
 
 ## 图片来源
 
