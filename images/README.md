@@ -21,6 +21,7 @@
 15. **xian_food3.jpg** - 西安美食图片（Biangbiang面）
 16. **xian_food4.jpg** - 西安美食图片（油糕）
 17. **xian_food5.jpg** - 西安美食图片（牛肉汤）
+18. **xian_food6.jpg** - 西安美食图片（凉皮）
 18. **luoyang_food1.jpg** - 洛阳美食图片（羊肉汤）
 19. **luoyang_food2.jpg** - 洛阳美食图片（不翻汤）
 20. **luoyang_food3.jpg** - 洛阳美食图片（小街锅贴）
